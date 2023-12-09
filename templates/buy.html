@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>buy</title>
+    <link rel="stylesheet" href="static/css/try.css">
+    <link rel="shortcut icon" href="/static/image/radiance.png" type="image/x-icon">
+    <script src="static/js/buy.js" defer></script>
+</head>
+<body>
+<noscript id="user_balance">{{ bal }}</noscript>
+<noscript id="price">{{ item.iprice }}</noscript>
+<noscript id="file">/static/blenderfile/{{ item.blenderfile }}</noscript>
+    <div class="buy_txt">
+        <video src="/static/video/{{ item.video }}" loop autoplay muted></video>
+        <div class="gp">
+            {% if nt == 1 %}
+                <a href="/to_trash/{{ current_user.id }}/{{ item.itemid }}/0">Добавить в корзину</a><br>
+            {% else %}
+                <a>Добавить в корзину</a><br>
+            {% endif %}
+            <p></p>
+            <form method="post">
+                <button id="down" type="submit">{{ item.iprice }}руб оплатить</button><br> {# do a check balance here #}
+            </form>
+            <p></p>
+            <a href="/">Назад</a>
+        </div>
+    </div>
+
+</body>
+</html>

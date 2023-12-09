@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="static/css/login.css">
+    <script src="/static/js/register.js" defer></script>
+</head>
+<body>
+<noscript id="all_filled">{{ all_filled }}</noscript>
+<noscript id="ps">{{ ps }}</noscript>
+<noscript id="used_name">{{ used_name }}</noscript>
+<div class="di">
+    <form method="post">
+        <div class="inp">
+            <input type="text" name="login" placeholder="Enter your login"><br>
+            <input type="password" name="password" placeholder="Enter your password"><br>
+            <input type="password" name="password2" placeholder="Retype your password"><br>
+            <input type="submit" value="Register" class="inpbut"><br>
+        </div>
+    </form>
+    <div class="btn-2">
+        <a href="/login">
+            Back
+        </a>
+    </div>
+
+</div>
+</body>
+</html>

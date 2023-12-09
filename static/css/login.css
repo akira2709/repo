@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+.di {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+input[type="text"], input[type="password"], input[type="submit"] {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.inpbut {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.inpbut:hover {
+    background-color: #cc0000;
+}
+.btn-2{
+    height: 36px;
+    background: #109610;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.btn-2:hover{
+    background-color: green;
+}
+.btn-3{
+    margin-top: 10px;
+    height: 36px;
+    background: #4444f1;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.btn-3:hover{
+    background-color: #195ab4;
+}
+a {
+    padding-top: 10px;
+    font-size: 13px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+

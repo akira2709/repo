@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>katalog</title>
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="icon" href="/static/image/icon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        {% if current_user.status == 'admin' %}
+            <a href="/for admin" id="admin link">Admin panel</a>
+        {% else %}
+            <h1 id="3d">3D Model Shop</h1>
+        {% endif %}
+        <div class="login">
+            {% if current_user.is_authenticated %}
+                <a href="/to_trash/{{ current_user.id }}/0/0" id="trash">Корзина</a>
+                <a href="/user_profile">{{ current_user.login }}</a>
+            {% else %}
+                <a href="/login">Login</a>
+            {% endif %}
+        </div>
+    </header>
+    <main>
+        <span>
+            {% for i in item %}
+                <section class="product" id="product">
+                    <a href="/{{ i.itemid }}">
+                        <img src="/static/image/{{ i.image }}" alt="no image">
+                        <figcaption>{{ i.iprice }}руб</figcaption>
+                    </a>
+                </section>
+            {% endfor %}
+        </span>
+    </main>
+    <footer class="footer">
+        <ul>
+            <li>
+                <a href="#3d">3D Model Shop</a>
+            </li>
+            <li>
+                <a href="#product">Models</a>
+            </li>
+            <li>
+                <a href="mailto:ivanlylin@gmail.com">Our email</a>
+            </li>
+            <li>
+                <a href="tel:+79036868680">Our telephone</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>trash</title>
+    <link rel="stylesheet" href="/static/css/trash.css">
+    <script src="/static/js/main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        {% for i in item %}
+            <img src="/static/image/{{ i.image }}">
+            <form action="/to_trash/{{ current_user.id }}/{{ i.itemid }}/{{ i.itemid }}" method="post">
+                <button id="button">Удалить</button>
+            </form>
+        {% endfor %}
+        <noscript id="files">{{ files }}</noscript>
+        <noscript id="balance">{{ balance }}</noscript>
+        <noscript id="total">{{ total }}</noscript>
+        <form method="post">
+		    <button onclick="downloadFiles()" type="submit" id="pay">Оплатить: {{ total }}руб</button>
+        </form>
+        <a href="/">Назад</a>
+    </div>
+</body>
+</html>
